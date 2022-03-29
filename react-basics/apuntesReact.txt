@@ -1,0 +1,106 @@
+ + El archivo package.json es el manifest. Tiene todas las dependencias y paquetes
+que se están utilizando
+
+ + React funciona como un marco de aplicación, de una sola página, todo se ejecuta
+ a través de una sola página física y eso es index.html
+
+ + index.js, se conecta a la página index.html mediante DOM con una id
+
+ + App.js, esta conectado al index.js. Este tiene una función render(), para
+ renderizar el componente en el navegador y luego devolverá JSX, es como html
+ pero es una forma más fácil de escribir javascript para la salida en el navegador.
+ No puedo usar la palabra class. ej: <div class=""> NO
+
+ + Voy a borrar el index.css para quitar todos los estilos. Y el logo.svg porque 
+ no lo voy a utilizar
+
+ + Voy a cambiar el estilo de la App por uno por defecto
+
+ + Voy a crear una carpeta components, para las clases y dentro de esta un nuevo componente
+ ej: Cuotas.js
+
+ + Me viene por defecto con funciones y el del video tiene clases
+
+ + Antes de nada hay que lanzar npm start
+
+ + Voy a crear otro componente llamado CuotaItem. Lo importaré en el componente Cuota.js y sacaré su contenido por este.
+
+ + Hay que importar los PropTypes y le decimos que el array de cuotas es requerido.
+
+ + Podemos añadir styles en el mismo codigo de retorno. Y usaremos constantes/variables para definir el style o un metodo para 
+ ir tener un estilo dinámico.
+
+ + Podemos gestionar los eventos "cuando seleccione el input mandará un evento "como que ha hecho algo" " (onChange={}). Guardamos
+la función en props para luego poder utilizar esta en otro Component.
+
++ Ahora mismo estoy guardando eventos y muestro el número de estos por consola
+
++ Vamos a crear un button con estilo y función onClick, para decir que queremos que haga ese btn. En este caso lanza una función
+filter para borrar del array la cuota seleccionada
+
++ Creamos un nuevo componente AddCuota, el cual constará de un formulario donde tendremos dos inputs uno de texto para darle nombre
+a la nueva cuota y otro de tipo submit para guardarla.
+Por el momento recoge el título del input de texto, y se lo pasa a una función que añadirá la nueva cuota al array.
+
++ Después vamos a instalar uuid para "ids aleatorias"
+
+// APUNTE -> Await: Pausa y reanuda una función asíncrona y espera la resolución/rechazo de la promesa.
+
++ //Video de React JS Crash Course (2019) minuto 1:15:25
+
++ Insatalamos react-router-dom 
+
++ Creamos una carpeta para las pages y creamos una llamada About.js. Este tendrá una función donde tendremos el contenido de la nueva page.
+
++ Vamos al .js de la App e importamos el enrutador de dom y la nueva page de About.js
+
++ Utilizamos Route para asignar rutas a las pages del proyecto
+
++ Ahora vamos a hacer solicitudes a la API
+
+SEGUNDO VIDEO DE REACT
+Usamos React, para poder separar el programa por componentes. Podemos crearlos como función o como clase.
+Se usa la sintaxis de jsx que es similar a la html 
+
++ Los componentes pueden contener algo llamado state, este es un objeto que determina como se representa y 
+se comporta un componente. ej: un menú plegable tiene abierto un estado abierto/cerrado, entonces podría tener un
+state que tenga como valor true/false
+
++ Muchas veces vas a querer compartir esos datos con multiples componentes, por lo que usariamos App state o 
+global state.
+También puedes utilizar administrador de estados de terceros como redux
+
++ React Hooks Existen otros ganchos:
+ - useState: Nos permite devolver un value y una función para actualizarlo
+ - useEffect: Se usa para realizar efectos secundarios en los componentes de la función. Uno de los usos
+ más importantes, es hacer http cuando se carga la página, por lo que si está devolviendo datos de una API en la carga
+ de la página.
+ - useContext: 
+ - useReduce: 
+ - useRef: 
+
+ // Antes de cada proyecto hay que lanzar el npx create-react-app
+
+Archivos del proyecto:
+ + index.html: tenemos la estructura básica y es por donde sacaremos todo el contenido.
+
+ + index.js: tenemos un render donde insertaremos nuestra app y todo lo que queramos. 
+ Esto saldrá por el div del html.
+
+ + index.css: Aquí tenemos los estilos del programa.
+
+ + App.js: contiene el componente raíz de la app, por lo que cada componente que creemos (header, footer, etc.).
+ Estará en App.js
+
+ + Header.js: tiene el contenido de la cabecera de la app "h1, etc."
+
+He instalado un "plugin" y ahora con ra + Tab creamos una estructura por defecto.
+
+Existen diferentes PropTypes, para importarlo simplemente usamos impt + Tab, podemos definir
+el contenido de un componente como "string, number, etc.". Al hacer esto nos aseguramos que el
+tipo de datos de variables del componente tenga valores de ese tipo. Y de que su valor no esta vacio.
+
+También podemos definir un style en cualquier parámetro "h1" o en una función y luego utilizarla en este "h1".
+
+Ahora vamos a crear otro componente para el boton. A este le hemos pasado unos valores desde el header, 
+que es donde va a estar el button, a la clase Button donde lo configuramos.
