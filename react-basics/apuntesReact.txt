@@ -103,4 +103,36 @@ tipo de datos de variables del componente tenga valores de ese tipo. Y de que su
 También podemos definir un style en cualquier parámetro "h1" o en una función y luego utilizarla en este "h1".
 
 Ahora vamos a crear otro componente para el boton. A este le hemos pasado unos valores desde el header, 
-que es donde va a estar el button, a la clase Button donde lo configuramos.
+que es donde va a estar el button, a la clase Button donde lo configuramos. Le pasamos valores y la función onClick
+para eventos.
+
+Creamos otro componente para la lista de tasks "tasks.js". Este va a recibir la lista de tasks, 
+y va a usar .map para lanzarla a la página.
+
+Ahora en lugar de en el componente Tasks tener tan solo un "h3" para cada task, voy a crear un componente separado para
+definir como va a ser cada task. Así que vamos a importar el nuevo componente de task en Tasks.js
+
+Existe un paquete de iconos de React, para instalarlo utílizamos: npm i react-icons.
+
+Una vez ya tenemos el formato para las tasks. Vamos a añadir una función para poder borrarlas.
+También vamos a añadir otra función para editar la task "en este caso con dos clicks cambiaremos el estado de una var a true o false"
+Estas funciones las crearemos en App.js para tener las funciones más centralizadas.
+
+Vamos a crear otro componente para poder añadir más tasks a la lista e igual que las anteriores funciones CRUD,
+creamos una función "addTask" para añadir una nueva task.
+
+Cuando ya terminas "todo" hay que ejecutar el comando npm run build, para compilar el proyecto.
+También podemos instalar el npm globalmente con: sudo npm i -g serve.
+Ahora mismo tenemos un servidor http básico, por lo que ahora vamos a modificarlo un poco "cambiando el puerto
+con el comando serve -s build -p nºpuerto"
+
+Vamos a crear un "backend" para ello instalamos "json-server" y añadimos en package.json el script "server": "json-server --watch db.json --port 5000"
+
+Y para ponerlo en marcha utilizamos: npm run server y en otra terminal npm start
+
+Una vez tenemos el archivo de backend db.json, vamos a modificarlo según nuestro modelo de datos
+
+// He tenido un error para sacar la api debido a un lio de puertos. porque el 5000 no se puede utilizar y he quitado el puerto,
+// para dejarlo en el predeterminado pero como el predeterminado es el 3000 había confusión con la página.
+
++ Me he quedado por el minuto 1:26:30 del segundo video.
