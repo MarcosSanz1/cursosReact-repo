@@ -75,7 +75,7 @@ class App extends Component {
                   <Cuotas cuotas={this.state.cuotas} markComplete={this.markComplete} delCuota={this.delCuota}/>
                 </React.Fragment>
               )} />
-              <Route path="/about" component={About} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </div>
         </div>

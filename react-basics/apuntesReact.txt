@@ -135,4 +135,12 @@ Una vez tenemos el archivo de backend db.json, vamos a modificarlo según nuestr
 // He tenido un error para sacar la api debido a un lio de puertos. porque el 5000 no se puede utilizar y he quitado el puerto,
 // para dejarlo en el predeterminado pero como el predeterminado es el 3000 había confusión con la página.
 
+Vamos a usar useEffect para recoger y mostrar la lista de tasks que tenemos en la API
+
+Vamos a crear una función para poder borrar tasks de la API, que recoge una id y borra la task con dicho id
+
+También creamos otra función para poder editar la task
+
+Ahora vamos a instalar el paquete react-router-dom
+
 + Me he quedado por el minuto 1:26:30 del segundo video.
